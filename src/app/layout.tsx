@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,7 +15,10 @@ export const metadata: Metadata = {
   title: "家庭出遊行程",
   description: "過年行程快速新增與查看",
   manifest: "/manifest.webmanifest",
-  themeColor: "#0f172a",
+  themeColor: "#0acff1",
+  verification: {
+    google: "xH5oJL_Xqj3LipkIS-1bIA30k4TDKRNKm44b1sOGfVI",
+  },
 };
 
 
