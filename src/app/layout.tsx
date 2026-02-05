@@ -1,39 +1,28 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
-  title: "家庭出遊行程",
-  description: "過年行程快速新增與查看",
+  title: "我的行程",
+  description: "手機版行程規劃",
   manifest: "/manifest.webmanifest",
-  themeColor: "#0acff1",
-  verification: {
-    google: "xH5oJL_Xqj3LipkIS-1bIA30k4TDKRNKm44b1sOGfVI",
-  },
 };
 
-
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-slate-50 text-slate-900">
-        {children}
-      </body>
-
+    <html lang="zh-Hant">
+      <body>{children}</body>
     </html>
   );
 }
